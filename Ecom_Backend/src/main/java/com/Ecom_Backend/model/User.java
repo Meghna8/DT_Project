@@ -1,48 +1,71 @@
 package com.Ecom_Backend.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.validation.constraints.Pattern;
 
-import org.hibernate.validator.constraints.Email;
-import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.stereotype.Component;
-
-@Entity
 @Component
-public class User {
-	
-	@Id 
-	@NotEmpty(message="enter the email")
-	@Email (message="enter the valid email ")
-	
-	private String email;
-	
-	@GeneratedValue
-	private int uid;
-	
-	
-	
-	@NotEmpty(message="enter the name")
+@Entity
 
-	private String name;
+public class User implements Serializable
+{
 	
+public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public boolean isEnabled() {
+		return enabled;
+	}
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+@Id//will mark the attribute as primary key
+private String email;
+private String name;
+private String password;
 
-	@NotEmpty(message="password cannot be null")
-	private String password;
-	
+private String role;
+private String address;
+private String phone;
+private boolean enabled;
 
-	@NotEmpty(message="address cannot be empty")
-	private String address;
-	
 
-	@NotEmpty(message="enter phone number")
-	@Pattern(regexp="(^$|[0-9]{10})",message="please enter correct digits")     //This annotation can be used when we want to chack a field against a regular expression. The regex is set as an attribute to the annotation.
-	private String phone;
-	
-	private String role;
-	private boolean enabled;
-	
+
+
 
 }

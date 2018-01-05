@@ -12,8 +12,11 @@ xmlns:webflow="http://www.springframework.org/schema/webflow-config"
        http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
        http://www.springframework.org/schema/webflow-config
         http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.0.xsd"> 
-        
+     <mvc:default-servlet-handler/>   
 	<context:component-scan base-package="com.*" />
+	<context:component-scan base-package="com.allController.*" />
+	<context:component-scan base-package="com.allController.UserController" />
+	
 	<context:component-scan base-package="com.Ecom_Backend.*" />
 	
 	<bean id="viewResolver"

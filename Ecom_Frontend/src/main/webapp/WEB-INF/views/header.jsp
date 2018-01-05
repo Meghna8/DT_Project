@@ -15,98 +15,51 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
-  <style>
+  <!-- <style>
   .nav.navbar-nav li a {
     color: white;
     }
     
     .navbar-nav > li > .dropdown-menu { background-color: #FF0000; }
  
-  </style>
+  </style> -->
 
 </head>
 <body>
+<!-- Load when user click register -->
+<c:if test="${userClickRegister==true }">
 
+</c:if>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+       <li class="active"><a href="#">Contact</a></li>
+        <li class="active"><a href="#">Product List</a></li>
+         <li class="active"><a href="#">Admin</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Category <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Page 2</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="register.jsp">Register</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+  
 <div class="container">
-<div class="row">
-<div class="navbar navbar-fixed-top" style="background-color:#e53935;" role="navigation">
-
-<div>
-<form class="navbar-form navbar-right" role="search">
-<div class="form-group">
-<input type="text" class="form-control" placeholder="eg.T-shirt">
+  <h3>Right Aligned Navbar</h3>
+  <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
 </div>
-<button type="submit" class="btn btn-outline">Search</button>
-</form>
-</div>
-
-
-
-<div>
-<ul class="nav navbar-nav navbar-right">
-<li><a href="index">Home</a></li>
-
- <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<span class="caret"></span></a>
-          <ul class="dropdown-menu" >
-           <c:forEach items="${cattlist}" var="cat">
-           <li><a href="${pageContext.request.contextPath}/custproduct?cid=${cat.cid}">${cat.cname}</a> </li>
-		 
-										</c:forEach>
-           
-          </ul>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-        </li>
-        
-        
-        
-        
-        
-<li><a href="#">Womens</a></li>
-<li><a href="Adm">Admin</a></li>
-<li><a href="#">Login</a></li>
-<li><a href="RegisterPage">Register</a></li>
-
-
-</ul>
-</div>
- 
-
-</div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>
