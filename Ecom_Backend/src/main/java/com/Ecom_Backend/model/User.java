@@ -1,22 +1,35 @@
 package com.Ecom_Backend.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import org.springframework.stereotype.Component;
-@Component
-@Entity
 
-public class User implements Serializable
-{
+@Component    // The @Component annotation marks a java class as a bean so the component-scanning mechanism of spring can pick it up and pull it into the application context  
+@Entity  
+public class User {
 	
-public String getEmail() {
+	@Id 
+	private String email;
+	@GeneratedValue
+	private int uid;
+	private String name;
+	private String password;
+	private String address;
+	private String role;
+	private boolean enabled;
+	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public int getUid() {
+		return uid;
+	}
+	public void setUid(int uid) {
+		this.uid = uid;
 	}
 	public String getName() {
 		return name;
@@ -30,23 +43,17 @@ public String getEmail() {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getRole() {
-		return role;
-	}
-	public void setRole(String role) {
-		this.role = role;
-	}
 	public String getAddress() {
 		return address;
 	}
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getPhone() {
-		return phone;
+	public String getRole() {
+		return role;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setRole(String role) {
+		this.role = role;
 	}
 	public boolean isEnabled() {
 		return enabled;
@@ -54,18 +61,8 @@ public String getEmail() {
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
 	}
-@Id//will mark the attribute as primary key
-private String email;
-private String name;
-private String password;
-
-private String role;
-private String address;
-private String phone;
-private boolean enabled;
-
-
-
-
+	
+	
+	
 
 }

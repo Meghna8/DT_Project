@@ -2,64 +2,143 @@
     pageEncoding="ISO-8859-1"%>
     <%@taglib uri="http://www.springframework.org/tags/form" prefix="f"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
     <%@ page isELIgnored="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
-  <!-- <style>
-  .nav.navbar-nav li a {
-    color: white;
-    }
+  
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css">
+
+.dropdown-toggle {
+   
     
-    .navbar-nav > li > .dropdown-menu { background-color: #FF0000; }
- 
-  </style> -->
+    padding: 16px;
+    
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+.dropdown-menu a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown:hover .dropdown-toggle{
+    background-color: hidden;
+}
+</style>
 
 </head>
 <body>
-<!-- Load when user click register -->
-<c:if test="${userClickRegister==true }">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="${pageContext.request.contextPath}/"> 
+		</a>
+		
+		
 
-</c:if>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+ <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-       <li class="active"><a href="#">Contact</a></li>
-        <li class="active"><a href="#">Product List</a></li>
-         <li class="active"><a href="#">Admin</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Category <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Page 1-1</a></li>
-          <li><a href="#">Page 1-2</a></li>
-          <li><a href="#">Page 1-3</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Page 2</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="register.jsp">Register</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
-  
-<div class="container">
-  <h3>Right Aligned Navbar</h3>
-  <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
-</div>
 
+		
+		<div class="collapse navbar-collapse"
+			id="bs-example-navbar-collapse-1">
+			
+			<ul class="nav navbar-nav navbar-right">
+
+				<li><a href="${pageContext.request.contextPath}/index">Home</a></li>
+			
+			
+			
+			
+			
+			
+			
+				
+				<li class="dropdown"><a id="pro" class="dropdown-toggle"
+					data-toggle="dropdown" href="#",style="color:white" >ShopByCategory<span class="caret"></span></a>
+					</li>
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+
+
+
+
+<li><a href="${pageContext.request.contextPath}/admin">Admin</a></li>
+ 
+ 
+<li><a href="${pageContext.request.contextPath}/login">Login</a></li>
+<li><a href="${pageContext.request.contextPath}/RegisterPage">Register</a></li>
+
+ <li><a href="${pageContext.request.contextPath}/Cart"><span class="glyphicon glyphicon-shopping-cart"></span>YourCart</a></li>
+
+
+<li>			
+<div>
+<form class="navbar-form navbar-right" role="search">
+<div class="form-group">
+<input type="text" class="form-control" placeholder="eg.T-shirt">
+</div>
+<button type="submit" class="btn btn-outline">Search</button>
+</form>
+</div>
+</li>
+			</ul>
+
+
+
+			
+		</div>
+	</div>
+	</nav>
+	
 </body>
 </html>

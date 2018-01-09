@@ -4,6 +4,5 @@ import com.Ecom_Backend.model.User;
 
 public interface UserDao {
 	
-	public void insertUser(User user);
-
+	public void saveUser(User user);
 }

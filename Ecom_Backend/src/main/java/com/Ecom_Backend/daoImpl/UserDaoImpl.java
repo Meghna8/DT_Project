@@ -15,31 +15,25 @@ import com.Ecom_Backend.model.User;
 
 public class UserDaoImpl implements UserDao {
 	
+
 	@Autowired
 	SessionFactory sessionFactory;
-	@Autowired
-	public UserDaoImpl(SessionFactory sessionFactory)
-	{
-		super();
-		this.sessionFactory= sessionFactory;
+	
+	
+	public void saveUser(User user) {
+		Session ssn=sessionFactory.openSession();  
+		ssn.beginTransaction();
+		ssn.save(user);
+		ssn.getTransaction().commit();  
+		
+		
 	}
    
-	//remove this section 
-	//public UserDaoImpl(String string) {
-		// TODO Auto-generated constructor stub
-	//}
-	//Transactional
-	public void insertUser(User user) {
-		Session ssn = sessionFactory.openSession();
-		ssn.beginTransaction();
-		//ssn.persist(user);
-		ssn.saveOrUpdate(user);
-		ssn.getTransaction().commit();
-		
+	
 		
 	}
 	
 	
 	
 
-}
+

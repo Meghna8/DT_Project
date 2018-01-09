@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 xmlns:context="http://www.springframework.org/schema/context"                    
 xmlns:webflow="http://www.springframework.org/schema/webflow-config"
@@ -12,12 +11,10 @@ xmlns:webflow="http://www.springframework.org/schema/webflow-config"
        http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
        http://www.springframework.org/schema/webflow-config
         http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.0.xsd"> 
-     <mvc:default-servlet-handler/>   
+     <mvc:default-servlet-handler/>      
 	<context:component-scan base-package="com.*" />
-	<context:component-scan base-package="com.allController.*" />
-	<context:component-scan base-package="com.allController.UserController" />
-	
-	<context:component-scan base-package="com.Ecom_Backend.*" />
+	<context:component-scan base-package="com.allController.*"></context:component-scan>
+	<context:component-scan base-package="com.Ecom_Backend.*"></context:component-scan>
 	
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -25,12 +22,12 @@ xmlns:webflow="http://www.springframework.org/schema/webflow-config"
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 	
-<!--<bean id="multipartResolver"
+<!-- <bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="maxUploadSizePerFile" value="300000000"/>
 
 	</bean>
-  -->
+ -->
 
 	<mvc:annotation-driven />
 	
