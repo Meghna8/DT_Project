@@ -35,7 +35,7 @@ public class User implements Serializable{
 	private String lastName;
 	@NotBlank(message = "Please enter email address!")	
 	private String email;
-	@NotBlank(message = "Please enter contact number!")
+	@NotBlank(message = "Pease enter contact number!")
 	@Column(name = "contact_number")
 	private String contactNumber;
 	private String role;
