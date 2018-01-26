@@ -8,6 +8,7 @@
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>	
 <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +55,8 @@
 	        <div class="container">
 	            <!-- Brand and toggle get grouped for better mobile display -->
 	            <div class="navbar-header">
-	                <a class="navbar-brand" href="${contextRoot}/home">Online Shopping</a>
+	            <%@include file="./shared/navbar.jsp" %>
+	               <!-- <a class="navbar-brand" href="${contextRoot}/home">Online Shopping</a> --> 
 	            </div>
 			</div>
 		</nav>		

@@ -4,7 +4,9 @@
 		
 		<h1>About Us</h1>
 		<hr/>
-		<p>This is an about us page</p>	
+		<p>This is an online furniture shopping site. </p>
+		<p>You can buy unique designed furniture and more home furnishing items from here.</p>	
+		
 	
 	</div>
 
