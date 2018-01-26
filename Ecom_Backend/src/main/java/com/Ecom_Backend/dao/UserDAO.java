@@ -14,7 +14,7 @@ public interface UserDAO {
 
 	boolean add(User user);
 	
-	// adding and updating a new address
+	// //adding and updating a new address
 	Address getAddress(int addressId);
 	boolean addAddress(Address address);
 	boolean updateAddress(Address address);
