@@ -1,2 +1,2 @@
 # DT_Project
-Ecommerce Website
+Ecommerce Website - Using Hibernate
